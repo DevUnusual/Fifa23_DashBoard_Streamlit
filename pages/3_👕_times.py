@@ -18,5 +18,7 @@ st.dataframe(df_filtered[columns].sort_values(by="Overall", ascending=False), co
   "Overall": st.column_config.ProgressColumn(
     "Overall",format="%d", min_value=0, max_value=100
   ),
-  "Wage(£)": st.column_config.ProgressColumn('Weekly Wage',format="£%f", min_value=0, max_value=df_filtered["Wage(£)"].max())
+  "Wage(£)": st.column_config.ProgressColumn('Weekly Wage',format="£%f", min_value=0, max_value=df_filtered["Wage(£)"].max()),
+  "Photo": st.column_config.ImageColumn(),
+  "Flag": st.column_config.ImageColumn(),
 })

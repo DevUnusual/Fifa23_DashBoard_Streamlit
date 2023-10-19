@@ -14,7 +14,9 @@ player_stats = df_players[df_players["Name"] == player].iloc[0]
 
 #st.write(player_stats)
 
-st.image(player_stats["Photo"])
+col1, col2 = st.columns([0.10 , 0.90])
+col1.image(player_stats["Photo"])
+col2.image(player_stats["Flag"])
 st.title(player_stats["Name"])
 
 st.markdown("**Clube**: " + player_stats["Club"])
